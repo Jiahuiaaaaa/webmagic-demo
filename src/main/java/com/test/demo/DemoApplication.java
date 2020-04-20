@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 
-@EnableScheduling //开启定时任务，定时抓取数据
+//@EnableScheduling //开启定时任务，定时抓取数据
 @MapperScan("com.test.demo.dao")
 @ComponentScan(value = "com.test")//包扫描
 @SpringBootApplication

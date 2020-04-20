@@ -33,7 +33,7 @@ public class BaiduBaikeSpider implements PageProcessor {
     // 检索词
     private static String word;
     // 存储路经
-    private static final String PATH = "D:\\百科词条\\百度百科\\";
+    private static final String PATH = "D:\\webmagic\\百科词条\\百度百科\\";
 
     @Override
     public Site getSite() {
@@ -164,7 +164,7 @@ public class BaiduBaikeSpider implements PageProcessor {
     public static void main(String[] args) throws IOException {
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader("D:\\nba.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("D:\\webmagic\\baike.txt"));
             while ((word = br.readLine()) != null) {
                 // 创建Spider，addUrl的参数可以为可变参数，但是会有问题
                 Spider.create(new BaiduBaikeSpider()).addPipeline(new ConsolePipeline())
