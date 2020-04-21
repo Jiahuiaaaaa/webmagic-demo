@@ -16,8 +16,7 @@ public class ServiceImpl  implements com.test.demo.service.Service {
 
     @Override
     public int saveJobInfo(JobInfo jobInfo) {
-        int i = dao.saveJobInfo(jobInfo);
-        return i;
+        return dao.saveJobInfo(jobInfo);
     }
 
 
