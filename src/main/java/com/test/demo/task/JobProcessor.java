@@ -85,7 +85,7 @@ public class JobProcessor implements PageProcessor {
         Spider.create(new JobProcessor())
                 .addUrl(url)
                 .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))
-                .thread(10)
+                .thread(5)
                 .addPipeline(this.saveData)//指定把爬取的数据保存到SaveData类的ResultItems中
                 .run();
     }
